@@ -226,7 +226,7 @@ class Videollama3Processor(ProcessorMixin):
         **kwargs,
     ):
         if isinstance(text[0], dict):
-            warnings.warn("Input text is a list of messages. Automatically convert it to a string with 'apply_chat_template' with generation prompt.")
+            # warnings.warn("Input text is a list of messages. Automatically convert it to a string with 'apply_chat_template' with generation prompt.")
             text = [self.tokenizer.apply_chat_template(text, tokenize=False, add_generation_prompt=True)]
 
         image_idx = 0
